@@ -1,0 +1,16 @@
+﻿        <h1>Все Инструменты</h1>
+        <h2>@Model.currCategory</h2>
+        <div class="row mt-5 mb-2">
+        @{
+            foreach(var instrument in Model.getAllInstruments){
+                <div class="col-lg-4">
+                <img class = "img-thumbnail" src="@instrument.img" alt="@instrument.instrumentName" />
+                <h3>Модель: @instrument.instrumentName</h3>
+                <h3>Год: @instrument.year</h3>
+                <p>@instrument.shortDesc</p>
+                <h3>Цена: @instrument.price.ToString("c")</h3>
+                <p><a class="btn btn-warning" href="#">Подробнее</a></p>
+                </div>
+            }
+        }
+        </div>
